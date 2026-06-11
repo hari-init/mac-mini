@@ -31,8 +31,9 @@ SITES = [
     },
 ]
 
-# ntfy.sh topic — open https://ntfy.sh/apple_mac_mini on your phone to subscribe
-NTFY_TOPIC = "apple_mac_mini"
+# Telegram Bot — set via GitHub Secrets or environment variables
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 
 HEADERS = {
     "User-Agent": (
@@ -115,34 +116,32 @@ def extract_products(html: str) -> dict:
     return products
 
 
-def send_notification(title: str, message: str, url: str = "", tags: str = "apple,package") -> None:
-    """Send a push notification via ntfy.sh."""
-    # Encode title as UTF-8 to handle emoji and special chars
-    headers = {
-        "Tags": tags,
-    }
-    if url:
-        headers["Click"] = url
-        headers["Actions"] = f"view, Open on Apple.com, {url}"
+def send_notification(title: str, message: str, url: str = "", tags: str = "") -> None:
+    """Send a push notification via Telegram Bot API."""
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+        print("  x Telegram credentials not set (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID)")
+        return
 
-    # Use JSON payload for proper UTF-8 support (ntfy's recommended approach)
-    payload = {
-        "topic": NTFY_TOPIC,
-        "title": title,
-        "message": message,
-        "tags": tags.split(","),
-    }
+    text = f"*{title}*\n\n{message}"
     if url:
-        payload["click"] = url
-        payload["actions"] = [{"action": "view", "label": "Open on Apple.com", "url": url}]
+        text += f"\n\n[Open on Apple.com]({url})"
 
     try:
         resp = requests.post(
-            "https://ntfy.sh",
-            json=payload,
+            f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage",
+            json={
+                "chat_id": TELEGRAM_CHAT_ID,
+                "text": text,
+                "parse_mode": "Markdown",
+                "disable_web_page_preview": False,
+            },
             timeout=10,
         )
-        print(f"  -> Notification sent (HTTP {resp.status_code})")
+        data = resp.json()
+        if data.get("ok"):
+            print(f"  -> Telegram notification sent")
+        else:
+            print(f"  x Telegram error: {data.get('description', resp.status_code)}")
     except Exception as e:
         print(f"  x Failed to send notification: {e}")
 
