@@ -143,9 +143,199 @@
       "G1KN2LL/A",
       "G1KN5LL/A"
     ],
-    "last_checked": "2026-06-11 20:14 UTC",
+    "last_checked": "2026-06-11 20:22 UTC",
     "product_count": 141,
     "products": {
+      "G17JALL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M2 Max Chip with 12\u2011Core CPU and 38\u2011Core GPU - Space Grey",
+        "price": 5379.0,
+        "color": "Space Grey"
+      },
+      "G1EH1LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Silver",
+        "price": 1869.0,
+        "color": "Silver"
+      },
+      "G1HF0LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
+        "price": 1909.0,
+        "color": "Sky Blue"
+      },
+      "G1ER2LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Pink",
+        "price": 2079.0,
+        "color": "Pink"
+      },
+      "G1KN5LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display - Silver",
+        "price": 2489.0,
+        "color": "Silver"
+      },
+      "FC7A4LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
+        "price": 1269.0,
+        "color": "Sky Blue"
+      },
+      "G1FT0LL/A": {
+        "name": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Space Black",
+        "price": 3009.0,
+        "color": "Space Black"
+      },
+      "G1K52LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Blue",
+        "price": 3149.0,
+        "color": "Blue"
+      },
+      "G1K78LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Purple",
+        "price": 2509.0,
+        "color": "Purple"
+      },
+      "G1EM1LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Green",
+        "price": 1869.0,
+        "color": "Green"
+      },
+      "FWV43LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet \u2013 Pink",
+        "price": 1659.0,
+        "color": "Pink"
+      },
+      "FWUC3LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 8-Core CPU and 8-Core GPU \u2013 Silver",
+        "price": 1439.0,
+        "color": "Silver"
+      },
+      "G1KJ2LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display - Space Black",
+        "price": 2239.0,
+        "color": "Silver"
+      },
+      "G1K35LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet \u2013 Green",
+        "price": 2509.0,
+        "color": "Green"
+      },
+      "FX2W3LL/A": {
+        "name": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 16\u2011Core CPU and 40\u2011Core GPU \u2013 Silver",
+        "price": 4499.0,
+        "color": "Silver"
+      },
+      "G1EQ3LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Blue",
+        "price": 2299.0,
+        "color": "Blue"
+      },
+      "FX2G3LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M4 Max Chip with 14\u2011Core CPU and 32\u2011Core GPU \u2013 Silver",
+        "price": 3649.0,
+        "color": "Silver"
+      },
+      "G1KK0LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU - Space Black",
+        "price": 2809.0,
+        "color": "Space Black"
+      },
+      "G1DG0LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
+        "price": 1519.0,
+        "color": "Midnight"
+      },
+      "G1ER1LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Pink",
+        "price": 1869.0,
+        "color": "Pink"
+      },
+      "G1K51LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Blue",
+        "price": 2719.0,
+        "color": "Blue"
+      },
+      "FDE34LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU - Space Black",
+        "price": 2299.0,
+        "color": "Space Black"
+      },
+      "G1K77LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Purple",
+        "price": 2299.0,
+        "color": "Purple"
+      },
+      "G1E55LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 8-Core CPU and 8-Core GPU \u2013 Blue",
+        "price": 2079.0,
+        "color": "Blue"
+      },
+      "G1K18LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Silver",
+        "price": 2509.0,
+        "color": "Silver"
+      },
+      "FW1K3LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Starlight",
+        "price": 1409.0,
+        "color": "Starlight"
+      },
+      "G1FQ4LL/A": {
+        "name": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
+        "price": 3949.0,
+        "color": "Silver"
+      },
+      "G1KK9LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display - Space Black",
+        "price": 3259.0,
+        "color": "Silver"
+      },
+      "G1KJ1LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU - Space Black",
+        "price": 3319.0,
+        "color": "Space Black"
+      },
+      "G1HE0LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
+        "price": 1659.0,
+        "color": "Sky Blue"
+      },
+      "G1FC0LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
+        "price": 3139.0,
+        "color": "Silver"
+      },
+      "G1FV4LL/A": {
+        "name": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 14\u2011Core CPU and 32\u2011Core GPU, Nano-texture display \u2013 Space Black",
+        "price": 4449.0,
+        "color": "Space Black"
+      },
+      "G1E20LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 8-Core CPU and 8-Core GPU, Gigabit Ethernet \u2013 Silver",
+        "price": 1469.0,
+        "color": "Silver"
+      },
+      "G1K50LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet \u2013 Blue",
+        "price": 2299.0,
+        "color": "Blue"
+      },
+      "G1720LL/A": {
+        "name": "Refurbished Mac Pro Rack Apple M2 Ultra with 24-core CPU and 60-core GPU",
+        "price": 8159.0,
+        "color": ""
+      },
+      "FC6L4LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
+        "price": 1659.0,
+        "color": "Midnight"
+      },
+      "G1HD1LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
+        "price": 1779.0,
+        "color": "Sky Blue"
+      },
+      "G1FQ3LL/A": {
+        "name": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
+        "price": 3439.0,
+        "color": "Silver"
+      },
       "FX2V3LL/A": {
         "name": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 14\u2011Core CPU and 32\u2011Core GPU \u2013 Silver",
         "price": 3949.0,
@@ -660,196 +850,6 @@
         "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
         "price": 1269.0,
         "color": "Midnight"
-      },
-      "G17JALL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M2 Max Chip with 12\u2011Core CPU and 38\u2011Core GPU - Space Grey",
-        "price": 5379.0,
-        "color": "Space Grey"
-      },
-      "G1EH1LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Silver",
-        "price": 1869.0,
-        "color": "Silver"
-      },
-      "G1HF0LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
-        "price": 1909.0,
-        "color": "Sky Blue"
-      },
-      "G1ER2LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Pink",
-        "price": 2079.0,
-        "color": "Pink"
-      },
-      "G1KN5LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display - Silver",
-        "price": 2489.0,
-        "color": "Silver"
-      },
-      "FC7A4LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
-        "price": 1269.0,
-        "color": "Sky Blue"
-      },
-      "G1FT0LL/A": {
-        "name": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Space Black",
-        "price": 3009.0,
-        "color": "Space Black"
-      },
-      "G1K52LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Blue",
-        "price": 3149.0,
-        "color": "Blue"
-      },
-      "G1K78LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Purple",
-        "price": 2509.0,
-        "color": "Purple"
-      },
-      "G1EM1LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Green",
-        "price": 1869.0,
-        "color": "Green"
-      },
-      "FWV43LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet \u2013 Pink",
-        "price": 1659.0,
-        "color": "Pink"
-      },
-      "FWUC3LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 8-Core CPU and 8-Core GPU \u2013 Silver",
-        "price": 1439.0,
-        "color": "Silver"
-      },
-      "G1KJ2LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display - Space Black",
-        "price": 2239.0,
-        "color": "Silver"
-      },
-      "G1K35LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet \u2013 Green",
-        "price": 2509.0,
-        "color": "Green"
-      },
-      "FX2W3LL/A": {
-        "name": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 16\u2011Core CPU and 40\u2011Core GPU \u2013 Silver",
-        "price": 4499.0,
-        "color": "Silver"
-      },
-      "G1EQ3LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Blue",
-        "price": 2299.0,
-        "color": "Blue"
-      },
-      "FX2G3LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M4 Max Chip with 14\u2011Core CPU and 32\u2011Core GPU \u2013 Silver",
-        "price": 3649.0,
-        "color": "Silver"
-      },
-      "G1KK0LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU - Space Black",
-        "price": 2809.0,
-        "color": "Space Black"
-      },
-      "G1DG0LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
-        "price": 1519.0,
-        "color": "Midnight"
-      },
-      "G1ER1LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Pink",
-        "price": 1869.0,
-        "color": "Pink"
-      },
-      "G1K51LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Blue",
-        "price": 2719.0,
-        "color": "Blue"
-      },
-      "FDE34LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU - Space Black",
-        "price": 2299.0,
-        "color": "Space Black"
-      },
-      "G1K77LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Purple",
-        "price": 2299.0,
-        "color": "Purple"
-      },
-      "G1E55LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 8-Core CPU and 8-Core GPU \u2013 Blue",
-        "price": 2079.0,
-        "color": "Blue"
-      },
-      "G1K18LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Silver",
-        "price": 2509.0,
-        "color": "Silver"
-      },
-      "FW1K3LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Starlight",
-        "price": 1409.0,
-        "color": "Starlight"
-      },
-      "G1FQ4LL/A": {
-        "name": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
-        "price": 3949.0,
-        "color": "Silver"
-      },
-      "G1KK9LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display - Space Black",
-        "price": 3259.0,
-        "color": "Silver"
-      },
-      "G1KJ1LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU - Space Black",
-        "price": 3319.0,
-        "color": "Space Black"
-      },
-      "G1HE0LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
-        "price": 1659.0,
-        "color": "Sky Blue"
-      },
-      "G1FC0LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
-        "price": 3139.0,
-        "color": "Silver"
-      },
-      "G1FV4LL/A": {
-        "name": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 14\u2011Core CPU and 32\u2011Core GPU, Nano-texture display \u2013 Space Black",
-        "price": 4449.0,
-        "color": "Space Black"
-      },
-      "G1E20LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 8-Core CPU and 8-Core GPU, Gigabit Ethernet \u2013 Silver",
-        "price": 1469.0,
-        "color": "Silver"
-      },
-      "G1K50LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet \u2013 Blue",
-        "price": 2299.0,
-        "color": "Blue"
-      },
-      "G1720LL/A": {
-        "name": "Refurbished Mac Pro Rack Apple M2 Ultra with 24-core CPU and 60-core GPU",
-        "price": 8159.0,
-        "color": ""
-      },
-      "FC6L4LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
-        "price": 1659.0,
-        "color": "Midnight"
-      },
-      "G1HD1LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
-        "price": 1779.0,
-        "color": "Sky Blue"
-      },
-      "G1FQ3LL/A": {
-        "name": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
-        "price": 3439.0,
-        "color": "Silver"
       }
     }
   },
@@ -997,9 +997,199 @@
       "G1KN2LL/A",
       "G1KN5LL/A"
     ],
-    "last_checked": "2026-06-11 20:14 UTC",
+    "last_checked": "2026-06-11 20:22 UTC",
     "product_count": 141,
     "products": {
+      "G17JALL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M2 Max Chip with 12\u2011Core CPU and 38\u2011Core GPU - Space Grey",
+        "price": 5379.0,
+        "color": "Space Grey"
+      },
+      "G1EH1LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Silver",
+        "price": 1869.0,
+        "color": "Silver"
+      },
+      "G1HF0LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
+        "price": 1909.0,
+        "color": "Sky Blue"
+      },
+      "G1ER2LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Pink",
+        "price": 2079.0,
+        "color": "Pink"
+      },
+      "G1KN5LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display - Silver",
+        "price": 2489.0,
+        "color": "Silver"
+      },
+      "FC7A4LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
+        "price": 1269.0,
+        "color": "Sky Blue"
+      },
+      "G1FT0LL/A": {
+        "name": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Space Black",
+        "price": 3009.0,
+        "color": "Space Black"
+      },
+      "G1K52LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Blue",
+        "price": 3149.0,
+        "color": "Blue"
+      },
+      "G1K78LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Purple",
+        "price": 2509.0,
+        "color": "Purple"
+      },
+      "G1EM1LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Green",
+        "price": 1869.0,
+        "color": "Green"
+      },
+      "FWV43LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet \u2013 Pink",
+        "price": 1659.0,
+        "color": "Pink"
+      },
+      "FWUC3LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 8-Core CPU and 8-Core GPU \u2013 Silver",
+        "price": 1439.0,
+        "color": "Silver"
+      },
+      "G1KJ2LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display - Space Black",
+        "price": 2239.0,
+        "color": "Silver"
+      },
+      "G1K35LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet \u2013 Green",
+        "price": 2509.0,
+        "color": "Green"
+      },
+      "FX2W3LL/A": {
+        "name": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 16\u2011Core CPU and 40\u2011Core GPU \u2013 Silver",
+        "price": 4499.0,
+        "color": "Silver"
+      },
+      "G1EQ3LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Blue",
+        "price": 2299.0,
+        "color": "Blue"
+      },
+      "FX2G3LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M4 Max Chip with 14\u2011Core CPU and 32\u2011Core GPU \u2013 Silver",
+        "price": 3649.0,
+        "color": "Silver"
+      },
+      "G1KK0LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU - Space Black",
+        "price": 2809.0,
+        "color": "Space Black"
+      },
+      "G1DG0LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
+        "price": 1519.0,
+        "color": "Midnight"
+      },
+      "G1ER1LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Pink",
+        "price": 1869.0,
+        "color": "Pink"
+      },
+      "G1K51LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Blue",
+        "price": 2719.0,
+        "color": "Blue"
+      },
+      "FDE34LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU - Space Black",
+        "price": 2299.0,
+        "color": "Space Black"
+      },
+      "G1K77LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Purple",
+        "price": 2299.0,
+        "color": "Purple"
+      },
+      "G1E55LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 8-Core CPU and 8-Core GPU \u2013 Blue",
+        "price": 2079.0,
+        "color": "Blue"
+      },
+      "G1K18LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Silver",
+        "price": 2509.0,
+        "color": "Silver"
+      },
+      "FW1K3LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Starlight",
+        "price": 1409.0,
+        "color": "Starlight"
+      },
+      "G1FQ4LL/A": {
+        "name": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
+        "price": 3949.0,
+        "color": "Silver"
+      },
+      "G1KK9LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display - Space Black",
+        "price": 3259.0,
+        "color": "Silver"
+      },
+      "G1KJ1LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU - Space Black",
+        "price": 3319.0,
+        "color": "Space Black"
+      },
+      "G1HE0LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
+        "price": 1659.0,
+        "color": "Sky Blue"
+      },
+      "G1FC0LL/A": {
+        "name": "Refurbished 14-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
+        "price": 3139.0,
+        "color": "Silver"
+      },
+      "G1FV4LL/A": {
+        "name": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 14\u2011Core CPU and 32\u2011Core GPU, Nano-texture display \u2013 Space Black",
+        "price": 4449.0,
+        "color": "Space Black"
+      },
+      "G1E20LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 8-Core CPU and 8-Core GPU, Gigabit Ethernet \u2013 Silver",
+        "price": 1469.0,
+        "color": "Silver"
+      },
+      "G1K50LL/A": {
+        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet \u2013 Blue",
+        "price": 2299.0,
+        "color": "Blue"
+      },
+      "G1720LL/A": {
+        "name": "Refurbished Mac Pro Rack Apple M2 Ultra with 24-core CPU and 60-core GPU",
+        "price": 8159.0,
+        "color": ""
+      },
+      "FC6L4LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
+        "price": 1659.0,
+        "color": "Midnight"
+      },
+      "G1HD1LL/A": {
+        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
+        "price": 1779.0,
+        "color": "Sky Blue"
+      },
+      "G1FQ3LL/A": {
+        "name": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
+        "price": 3439.0,
+        "color": "Silver"
+      },
       "FX2V3LL/A": {
         "name": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 14\u2011Core CPU and 32\u2011Core GPU \u2013 Silver",
         "price": 3949.0,
@@ -1514,196 +1704,6 @@
         "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
         "price": 1269.0,
         "color": "Midnight"
-      },
-      "G17JALL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M2 Max Chip with 12\u2011Core CPU and 38\u2011Core GPU - Space Grey",
-        "price": 5379.0,
-        "color": "Space Grey"
-      },
-      "G1EH1LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Silver",
-        "price": 1869.0,
-        "color": "Silver"
-      },
-      "G1HF0LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
-        "price": 1909.0,
-        "color": "Sky Blue"
-      },
-      "G1ER2LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Pink",
-        "price": 2079.0,
-        "color": "Pink"
-      },
-      "G1KN5LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display - Silver",
-        "price": 2489.0,
-        "color": "Silver"
-      },
-      "FC7A4LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
-        "price": 1269.0,
-        "color": "Sky Blue"
-      },
-      "G1FT0LL/A": {
-        "name": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Space Black",
-        "price": 3009.0,
-        "color": "Space Black"
-      },
-      "G1K52LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Blue",
-        "price": 3149.0,
-        "color": "Blue"
-      },
-      "G1K78LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Purple",
-        "price": 2509.0,
-        "color": "Purple"
-      },
-      "G1EM1LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Green",
-        "price": 1869.0,
-        "color": "Green"
-      },
-      "FWV43LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet \u2013 Pink",
-        "price": 1659.0,
-        "color": "Pink"
-      },
-      "FWUC3LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 8-Core CPU and 8-Core GPU \u2013 Silver",
-        "price": 1439.0,
-        "color": "Silver"
-      },
-      "G1KJ2LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display - Space Black",
-        "price": 2239.0,
-        "color": "Silver"
-      },
-      "G1K35LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet \u2013 Green",
-        "price": 2509.0,
-        "color": "Green"
-      },
-      "FX2W3LL/A": {
-        "name": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 16\u2011Core CPU and 40\u2011Core GPU \u2013 Silver",
-        "price": 4499.0,
-        "color": "Silver"
-      },
-      "G1EQ3LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Blue",
-        "price": 2299.0,
-        "color": "Blue"
-      },
-      "FX2G3LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M4 Max Chip with 14\u2011Core CPU and 32\u2011Core GPU \u2013 Silver",
-        "price": 3649.0,
-        "color": "Silver"
-      },
-      "G1KK0LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU - Space Black",
-        "price": 2809.0,
-        "color": "Space Black"
-      },
-      "G1DG0LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
-        "price": 1519.0,
-        "color": "Midnight"
-      },
-      "G1ER1LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Pink",
-        "price": 1869.0,
-        "color": "Pink"
-      },
-      "G1K51LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Blue",
-        "price": 2719.0,
-        "color": "Blue"
-      },
-      "FDE34LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU - Space Black",
-        "price": 2299.0,
-        "color": "Space Black"
-      },
-      "G1K77LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Purple",
-        "price": 2299.0,
-        "color": "Purple"
-      },
-      "G1E55LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 8-Core CPU and 8-Core GPU \u2013 Blue",
-        "price": 2079.0,
-        "color": "Blue"
-      },
-      "G1K18LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet, Nano-texture glass \u2013 Silver",
-        "price": 2509.0,
-        "color": "Silver"
-      },
-      "FW1K3LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Starlight",
-        "price": 1409.0,
-        "color": "Starlight"
-      },
-      "G1FQ4LL/A": {
-        "name": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
-        "price": 3949.0,
-        "color": "Silver"
-      },
-      "G1KK9LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU, Nano-texture display - Space Black",
-        "price": 3259.0,
-        "color": "Silver"
-      },
-      "G1KJ1LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M5 chip with 10\u2011Core CPU and 10\u2011Core GPU - Space Black",
-        "price": 3319.0,
-        "color": "Space Black"
-      },
-      "G1HE0LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
-        "price": 1659.0,
-        "color": "Sky Blue"
-      },
-      "G1FC0LL/A": {
-        "name": "Refurbished 14-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
-        "price": 3139.0,
-        "color": "Silver"
-      },
-      "G1FV4LL/A": {
-        "name": "Refurbished 16-inch MacBook Pro Apple M4 Max Chip with 14\u2011Core CPU and 32\u2011Core GPU, Nano-texture display \u2013 Space Black",
-        "price": 4449.0,
-        "color": "Space Black"
-      },
-      "G1E20LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 8-Core CPU and 8-Core GPU, Gigabit Ethernet \u2013 Silver",
-        "price": 1469.0,
-        "color": "Silver"
-      },
-      "G1K50LL/A": {
-        "name": "Refurbished 24-inch iMac Apple M4 Chip with 10-Core CPU and 10-Core GPU, Gigabit Ethernet \u2013 Blue",
-        "price": 2299.0,
-        "color": "Blue"
-      },
-      "G1720LL/A": {
-        "name": "Refurbished Mac Pro Rack Apple M2 Ultra with 24-core CPU and 60-core GPU",
-        "price": 8159.0,
-        "color": ""
-      },
-      "FC6L4LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Midnight",
-        "price": 1659.0,
-        "color": "Midnight"
-      },
-      "G1HD1LL/A": {
-        "name": "Refurbished 15-inch MacBook Air Apple M4 chip with 10\u2011Core CPU and 10\u2011Core GPU - Sky Blue",
-        "price": 1779.0,
-        "color": "Sky Blue"
-      },
-      "G1FQ3LL/A": {
-        "name": "Refurbished 16-inch MacBook Pro Apple M4 Pro Chip with 14\u2011Core CPU and 20\u2011Core GPU \u2013 Silver",
-        "price": 3439.0,
-        "color": "Silver"
       }
     }
   }
