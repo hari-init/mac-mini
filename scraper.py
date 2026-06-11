@@ -184,12 +184,29 @@ def main():
 
         # Get previously seen SKUs for this site
         previous_skus = set(state.get(site_key, {}).get("skus", []))
+        previous_products = state.get(site_key, {}).get("products", {})
         current_skus = set(current_products.keys())
 
-        # Determine new and removed products
+        # Determine new, removed, and price-changed products
         new_skus = current_skus - previous_skus
         removed_skus = previous_skus - current_skus
+        common_skus = current_skus & previous_skus
 
+        # Check for price changes on existing products
+        price_changed = []
+        for sku in common_skus:
+            old_price = previous_products.get(sku, {}).get("price")
+            new_price = current_products[sku]["price"]
+            if old_price is not None and old_price != new_price:
+                price_changed.append({
+                    "sku": sku,
+                    "name": current_products[sku]["name"],
+                    "old_price": old_price,
+                    "new_price": new_price,
+                    "url": current_products[sku]["url"],
+                })
+
+        # ── NEW PRODUCTS ──
         if new_skus:
             any_changes = True
             print(f"  🆕 {len(new_skus)} NEW product(s)!")
@@ -201,9 +218,7 @@ def main():
                 print(f"      SKU: {sku}")
                 print(f"      URL: {product['url']}")
 
-            # Build notification message
             if len(new_skus) <= 5:
-                # Send individual notification per product for small batches
                 for sku in sorted(new_skus):
                     p = current_products[sku]
                     title = f"New: {p['name']}"
@@ -215,7 +230,6 @@ def main():
                     )
                     send_notification(title, message, url=p["url"], tags="apple,package,tada")
             else:
-                # Batch notification — show first 10 to avoid payload limits
                 title = f"{len(new_skus)} new products on {site_name}!"
                 lines = []
                 for i, sku in enumerate(sorted(new_skus)):
@@ -227,12 +241,67 @@ def main():
                 message = "\n".join(lines)
                 send_notification(title, message, url=site_url, tags="apple,package,tada")
 
+        # ── REMOVED PRODUCTS (sold out) ──
         if removed_skus:
-            print(f"  🗑️  {len(removed_skus)} product(s) no longer listed")
-            for sku in sorted(removed_skus):
-                print(f"    - {sku}")
+            any_changes = True
+            print(f"  🗑️  {len(removed_skus)} product(s) SOLD OUT / removed")
 
-        if not new_skus and not removed_skus:
+            for sku in sorted(removed_skus):
+                old = previous_products.get(sku, {})
+                name = old.get("name", sku)
+                price = old.get("price", 0)
+                print(f"    - {name} — ${price:,.2f}")
+
+            if len(removed_skus) <= 5:
+                for sku in sorted(removed_skus):
+                    old = previous_products.get(sku, {})
+                    name = old.get("name", sku)
+                    price = old.get("price", 0)
+                    title = f"Sold out: {name}"
+                    message = (
+                        f"Was ${price:,.2f} CAD\n"
+                        f"SKU: {sku}\n"
+                        f"Source: {site_name}"
+                    )
+                    send_notification(title, message, url=site_url, tags="apple,rotating_light")
+            else:
+                title = f"{len(removed_skus)} products sold out on {site_name}"
+                lines = []
+                for i, sku in enumerate(sorted(removed_skus)):
+                    if i >= 10:
+                        lines.append(f"... and {len(removed_skus) - 10} more")
+                        break
+                    old = previous_products.get(sku, {})
+                    lines.append(f"{old.get('name', sku)} - was ${old.get('price', 0):,.2f}")
+                message = "\n".join(lines)
+                send_notification(title, message, url=site_url, tags="apple,rotating_light")
+
+        # ── PRICE CHANGES ──
+        if price_changed:
+            any_changes = True
+            print(f"  💰 {len(price_changed)} product(s) changed price!")
+
+            for pc in price_changed:
+                direction = "↓" if pc["new_price"] < pc["old_price"] else "↑"
+                print(f"    {direction} {pc['name']} — ${pc['old_price']:,.2f} → ${pc['new_price']:,.2f}")
+
+            for pc in price_changed:
+                diff = pc["new_price"] - pc["old_price"]
+                if diff < 0:
+                    title = f"Price drop: {pc['name']}"
+                    tags = "apple,chart_with_downwards_trend,tada"
+                else:
+                    title = f"Price increase: {pc['name']}"
+                    tags = "apple,chart_with_upwards_trend"
+                message = (
+                    f"Was: ${pc['old_price']:,.2f} CAD\n"
+                    f"Now: ${pc['new_price']:,.2f} CAD\n"
+                    f"Change: {'−' if diff < 0 else '+'}${abs(diff):,.2f}\n"
+                    f"Source: {site_name}"
+                )
+                send_notification(title, message, url=pc["url"], tags=tags)
+
+        if not new_skus and not removed_skus and not price_changed:
             print("  ✓ No changes")
 
         # Update state for this site
@@ -240,7 +309,6 @@ def main():
             "skus": sorted(current_skus),
             "last_checked": now,
             "product_count": len(current_products),
-            # Store product details for reference
             "products": {
                 sku: {
                     "name": p["name"],
@@ -257,7 +325,7 @@ def main():
     print(f"State saved to {STATE_FILE}")
 
     if not any_changes:
-        print("\nNo new products found across all sites.")
+        print("\nNo changes found across all sites.")
 
     return 0
 
