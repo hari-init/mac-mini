@@ -19,7 +19,10 @@ else:
 if content_hash != old_hash:
     print("Change detected!")
     # Send your notification here (Telegram/Discord/ntfy.sh)
-    # Example: requests.post("https://ntfy.sh/apple_mac_mini", data="Change detected!")
+    requests.post(
+        "https://ntfy.sh/apple_mac_mini",
+        data="The website you are monitoring has changed!".encode(encoding='utf-8')
+    )
     
     # 3. Update the hash file
     with open(FILE_NAME, "w") as f:
