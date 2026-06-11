@@ -1,50 +1,266 @@
-import requests
-import hashlib
-import os
-import json
+"""
+Apple Refurbished Store Monitor
+===============================
+Scrapes Apple's refurbished product pages using the embedded JSON-LD
+structured data (schema.org Product markup). Compares current products
+against a saved state and sends ntfy.sh push notifications for any
+newly added products.
 
-# Add as many sites as you want here
+Runs via GitHub Actions every 15 minutes.
+"""
+
+import requests
+import json
+import os
+import re
+import sys
+from datetime import datetime, timezone
+
+# ──────────────────────────────────────────────────────────────────────
+# Configuration
+# ──────────────────────────────────────────────────────────────────────
+
 SITES = [
-    {"name": "apple_mac_mini", "url": "https://www.apple.com/ca/shop/refurbished/mac/mac-mini"},
-    {"name": "another_site", "url": "https://www.apple.com/ca/shop/refurbished/mac"}
+    {
+        "name": "Refurbished Mac Mini",
+        "url": "https://www.apple.com/ca/shop/refurbished/mac/mac-mini",
+    },
+    {
+        "name": "Refurbished Mac (All)",
+        "url": "https://www.apple.com/ca/shop/refurbished/mac",
+    },
 ]
 
+# ntfy.sh topic — open https://ntfy.sh/apple_mac_mini on your phone to subscribe
+NTFY_TOPIC = "apple_mac_mini"
+
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) "
+        "AppleWebKit/605.1.15 (KHTML, like Gecko) "
+        "Version/17.4.1 Safari/605.1.15"
+    ),
+    "Accept-Language": "en-CA,en;q=0.9",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
 
-DATA_FILE = "sites_state.json"
+STATE_FILE = "sites_state.json"
 
-# Load existing states
-if os.path.exists(DATA_FILE):
-    with open(DATA_FILE, "r") as f:
-        state = json.load(f)
-else:
-    state = {}
+# ──────────────────────────────────────────────────────────────────────
+# Helpers
+# ──────────────────────────────────────────────────────────────────────
 
-for site in SITES:
-    name = site["name"]
-    url = site["url"]
+
+def load_state() -> dict:
+    """Load previously seen products from state file."""
+    if os.path.exists(STATE_FILE):
+        with open(STATE_FILE, "r") as f:
+            return json.load(f)
+    return {}
+
+
+def save_state(state: dict) -> None:
+    """Persist current product state to disk."""
+    with open(STATE_FILE, "w") as f:
+        json.dump(state, f, indent=2)
+
+
+def extract_products(html: str) -> dict:
+    """
+    Parse all JSON-LD <script type="application/ld+json"> blocks from the
+    page HTML. Returns a dict keyed by SKU with product details.
     
-    try:
-        response = requests.get(url, headers=HEADERS, timeout=10)
-        current_hash = hashlib.md5(response.text.encode()).hexdigest()
-        
-        old_hash = state.get(name)
-        
-        if old_hash != current_hash:
-            print(f"Change detected on {name}!")
-            # Send notification
-            requests.post(
-                "https://ntfy.sh/apple_mac_mini", # Use your same topic
-                data=f"Change detected on {name}: {url}".encode('utf-8')
-            )
-            # Update state
-            state[name] = current_hash
-            
-    except Exception as e:
-        print(f"Error checking {name}: {e}")
+    Apple embeds schema.org Product objects with name, sku, price, url,
+    description, and color for every refurbished product on the page.
+    """
+    products = {}
 
-# Save all states to one file
-with open(DATA_FILE, "w") as f:
-    json.dump(state, f)
+    # Find all JSON-LD script blocks
+    pattern = r'<script\s+type="application/ld\+json"[^>]*>(.*?)</script>'
+    matches = re.findall(pattern, html, re.DOTALL)
+
+    for raw_json in matches:
+        try:
+            data = json.loads(raw_json)
+        except json.JSONDecodeError:
+            continue
+
+        # Only process Product entries
+        if data.get("@type") != "Product":
+            continue
+
+        # Extract the SKU from the offers array
+        offers = data.get("offers", [])
+        if not offers:
+            continue
+
+        offer = offers[0] if isinstance(offers, list) else offers
+        sku = offer.get("sku", "")
+        if not sku:
+            continue
+
+        price = offer.get("price", 0)
+        currency = offer.get("priceCurrency", "CAD")
+
+        products[sku] = {
+            "name": data.get("name", "Unknown Product"),
+            "sku": sku,
+            "price": float(price),
+            "currency": currency,
+            "url": data.get("url", ""),
+            "description": data.get("description", ""),
+            "color": data.get("color", ""),
+        }
+
+    return products
+
+
+def send_notification(title: str, message: str, url: str = "", tags: str = "apple,package") -> None:
+    """Send a push notification via ntfy.sh."""
+    # Encode title as UTF-8 to handle emoji and special chars
+    headers = {
+        "Tags": tags,
+    }
+    if url:
+        headers["Click"] = url
+        headers["Actions"] = f"view, Open on Apple.com, {url}"
+
+    # Use JSON payload for proper UTF-8 support (ntfy's recommended approach)
+    payload = {
+        "topic": NTFY_TOPIC,
+        "title": title,
+        "message": message,
+        "tags": tags.split(","),
+    }
+    if url:
+        payload["click"] = url
+        payload["actions"] = [{"action": "view", "label": "Open on Apple.com", "url": url}]
+
+    try:
+        resp = requests.post(
+            "https://ntfy.sh",
+            json=payload,
+            timeout=10,
+        )
+        print(f"  -> Notification sent (HTTP {resp.status_code})")
+    except Exception as e:
+        print(f"  x Failed to send notification: {e}")
+
+
+# ──────────────────────────────────────────────────────────────────────
+# Main
+# ──────────────────────────────────────────────────────────────────────
+
+
+def main():
+    state = load_state()
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    any_changes = False
+
+    print(f"=== Apple Refurbished Monitor — {now} ===\n")
+
+    for site in SITES:
+        site_name = site["name"]
+        site_url = site["url"]
+        # Use a stable key for the state dict
+        site_key = site_url
+
+        print(f"Checking: {site_name}")
+        print(f"  URL: {site_url}")
+
+        try:
+            response = requests.get(site_url, headers=HEADERS, timeout=15)
+            response.raise_for_status()
+        except requests.RequestException as e:
+            print(f"  ✗ Failed to fetch page: {e}")
+            continue
+
+        current_products = extract_products(response.text)
+        print(f"  Found {len(current_products)} products on page")
+
+        if not current_products:
+            print("  ⚠ No products found — page may have changed structure")
+            continue
+
+        # Get previously seen SKUs for this site
+        previous_skus = set(state.get(site_key, {}).get("skus", []))
+        current_skus = set(current_products.keys())
+
+        # Determine new and removed products
+        new_skus = current_skus - previous_skus
+        removed_skus = previous_skus - current_skus
+
+        if new_skus:
+            any_changes = True
+            print(f"  🆕 {len(new_skus)} NEW product(s)!")
+
+            for sku in sorted(new_skus):
+                product = current_products[sku]
+                price_str = f"${product['price']:,.2f} {product['currency']}"
+                print(f"    + {product['name']} — {price_str}")
+                print(f"      SKU: {sku}")
+                print(f"      URL: {product['url']}")
+
+            # Build notification message
+            if len(new_skus) <= 5:
+                # Send individual notification per product for small batches
+                for sku in sorted(new_skus):
+                    p = current_products[sku]
+                    title = f"New: {p['name']}"
+                    message = (
+                        f"${p['price']:,.2f} {p['currency']}\n"
+                        f"SKU: {p['sku']}\n"
+                        f"Color: {p['color']}\n"
+                        f"Source: {site_name}"
+                    )
+                    send_notification(title, message, url=p["url"], tags="apple,package,tada")
+            else:
+                # Batch notification — show first 10 to avoid payload limits
+                title = f"{len(new_skus)} new products on {site_name}!"
+                lines = []
+                for i, sku in enumerate(sorted(new_skus)):
+                    if i >= 10:
+                        lines.append(f"... and {len(new_skus) - 10} more")
+                        break
+                    p = current_products[sku]
+                    lines.append(f"{p['name']} - ${p['price']:,.2f}")
+                message = "\n".join(lines)
+                send_notification(title, message, url=site_url, tags="apple,package,tada")
+
+        if removed_skus:
+            print(f"  🗑️  {len(removed_skus)} product(s) no longer listed")
+            for sku in sorted(removed_skus):
+                print(f"    - {sku}")
+
+        if not new_skus and not removed_skus:
+            print("  ✓ No changes")
+
+        # Update state for this site
+        state[site_key] = {
+            "skus": sorted(current_skus),
+            "last_checked": now,
+            "product_count": len(current_products),
+            # Store product details for reference
+            "products": {
+                sku: {
+                    "name": p["name"],
+                    "price": p["price"],
+                    "color": p["color"],
+                }
+                for sku, p in current_products.items()
+            },
+        }
+
+        print()
+
+    save_state(state)
+    print(f"State saved to {STATE_FILE}")
+
+    if not any_changes:
+        print("\nNo new products found across all sites.")
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
